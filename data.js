@@ -1,8 +1,8 @@
 let users = [];
 
-users.push({name:"Leah"});
-users.push({name:"Jack"});
-users.push({name:"Sarah"});
-users.push({name:"Lilly"});
+users.push({name:"Leah", email:"Leah@gmail.com"});
+users.push({name:"Jack", email:"Jack@gmail.com"});
+users.push({name:"Sarah", email:"Sarah@gmail.com"});
+users.push({name:"Lilly", email:"Lilly@gmail.com"});
 
 module.exports = users;

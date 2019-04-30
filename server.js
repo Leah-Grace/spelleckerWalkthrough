@@ -4,6 +4,13 @@ const users = require("./data");
 
 console.log(users);
 
+//get user by index
+app.get("/getuser", (req, res) =>{
+    const index = req.query.index;
+    const oneUser = users[index];
+    res.send(oneUser);
+})
+
 app.get("/greet", (req, res) => {
     const userName = req.query.user
 res.send(`Hello ${userName}!`);
