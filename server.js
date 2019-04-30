@@ -9,7 +9,30 @@ app.get("/getuser", (req, res) =>{
     const index = req.query.index;
     const oneUser = users[index];
     res.send(oneUser);
-})
+});
+
+//get user by index
+app.get("/getemail", (req, res) =>{
+    const name = req.query.name;
+    // const index = users.indexOf(name);
+    // const map = users.map(name => )
+
+
+function getemail(name){
+    const user = users.filter(userObj=>{
+      return userObj.name === name
+    })
+    
+    res.send(`Name is ${name} and email is ${user[0].email}`);
+    return user[0].email
+  }
+getemail(name);
+
+
+
+
+
+});
 
 app.get("/greet", (req, res) => {
     const userName = req.query.user
