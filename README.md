@@ -1,1 +1,1 @@
-Spellchecker using REST API
+Spellchecker using REpresentational State Transfer Application Programming Interface
