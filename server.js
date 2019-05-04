@@ -5,6 +5,9 @@ const getemail = require("./getemail");
 
 console.log(users);
 
+app.use(express.static("public"));
+app.use("public/history", express.static("history"));
+
 //get user by index
 app.get("/getuser", (req, res) =>{
     const index = req.query.index;
@@ -12,10 +15,10 @@ app.get("/getuser", (req, res) =>{
     res.send(oneUser);
 });
 
-
 //get user by index
 app.get("/getemail", (req, res) =>{
     const name = req.query.name;
+    const phoneNum = req.query.phone;
     const email = getemail(users, name);
     res.send(email);
 
@@ -36,5 +39,5 @@ app.get("/weather", (req, res) => {
     res.send(`How is the weather ${userName}?`);
 });
 
-const port = process.env.PORT || 5501;
+const port = process.env.PORT || 5502;
 app.listen(port, () => console.log(`Server listening on port ${port}`));
