@@ -6,7 +6,7 @@ const getemail = require("./getemail");
 console.log(users);
 
 app.use(express.static("public"));
-app.use("public/history", express.static("history"));
+// app.use("public/history", express.static("history"));
 
 //get user by index
 app.get("/getuser", (req, res) =>{
